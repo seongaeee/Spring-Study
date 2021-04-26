@@ -63,8 +63,6 @@ public class CoffeeShop {
 
 2. 스프링 applicationContext.xml
 
-<br>
-
 2-1. applicationContext.xml 설정
 ```
 - resources폴더에 xml 파일 생성
