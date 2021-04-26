@@ -63,7 +63,9 @@ public class CoffeeShop {
 
 2. 스프링 applicationContext.xml
 
-1) applicationContext.xml 설정
+<br>
+
+2-1. applicationContext.xml 설정
 ```
 - resources폴더에 xml 파일 생성
 - bean 태그 id에는 "참조에 사용할 값"
@@ -94,7 +96,7 @@ public class CoffeeShop {
 </beans>
 ```
 
-2) applicationContext.xml 사용
+2-2. applicationContext.xml 사용
 ```
 getBean을 사용할 때, bean id와 bean의 (상속)클래스명 입력
 ```
