@@ -29,7 +29,19 @@ public class CaffeLatte implements Coffee {
 	}
 }
 ```
-**3.코드**
+**3.서비스코드**
+```java
+public class CoffeeService {
+	Coffee coffee;
+	public void setCoffee(Coffee coffee) {
+		this.coffee=coffee;
+	}
+	public void askCoffee() {
+		System.out.print(coffee.info());
+	}
+}
+```
+**4.실행코드**
 ```java
 public class CoffeeShop {
 	public static void main(String[] args) {
@@ -80,15 +92,15 @@ public class CoffeeShop {
 	<bean id="menu1" class="com.coffee3.Americano"></bean>
 	<bean id="menu2" class="com.coffee3.CaffeLatte"></bean>
 
-	<bean id="myMenu1" class="com.coffee3.Coffee"
-		<property name="info">
-			<ref bean="menu1"/>
+	<bean id="myMenu1" class="com.coffee3.CoffeeService">
+		<property name="coffee">
+			<ref bean="coffee1"/>
 		</property>
 	</bean>
 	
-	<bean id="myMenu2" class="com.coffee3.Coffee"
-		<property name="info">
-			<ref bean="menu2"/>
+	<bean id="myMenu2" class="com.coffee3.CoffeeService">
+		<property name="coffee">
+			<ref bean="coffee2"/>
 		</property>
 	</bean>
 </beans>
@@ -109,8 +121,12 @@ public class CoffeeShop {
 		ApplicationContext context=new ClassPathXmlApplicationContext("coffee.xml");
 		
 		Coffee cof=context.getBean("menu1", Coffee.class);
-		
 		cof.info();
+		
+		CoffeeService mycoffee1=context.getBean("myMenu1", CoffeeService.class);
+		mycoffee1.askCoffee();
+		CoffeeService mycoffee2=context.getBean("myMenu2", CoffeeService.class);
+		mycoffee2.askCoffee();
 		
 		context.close();
 	}
@@ -151,8 +167,11 @@ public class CoffeeApp {
 	public static void main(String[] args) {
 		GenericXmlApplicationContext context=new GenericXmlApplicationContext("classpath:coffee.xml");
 		Coffee cof=context.getBean("coffee1", Coffee.class);
-		Coffee cof2=context.getBean("coffee2", Coffee.class);
 		Coffee cof3=context.getBean("coffee1", Coffee.class);
+		CoffeeService mycoffee1=context.getBean("myMenu1", CoffeeService.class);
+		
+		Coffee cof2=context.getBean("coffee2", Coffee.class);
+		CoffeeService mycoffee2=context.getBean("myMenu2", CoffeeService.class);
 		context.close();
 	}
 }
