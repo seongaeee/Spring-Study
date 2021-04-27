@@ -30,6 +30,7 @@ public class CaffeLatte implements Coffee {
 }
 ```
 **3.서비스코드**
+- set 함수 필수!!
 ```java
 public class CoffeeService {
 	Coffee coffee;
