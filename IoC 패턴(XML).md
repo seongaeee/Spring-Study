@@ -79,7 +79,7 @@ public class CoffeeShop {
 **2-1. applicationContext.xml 설정**
 ```
 - resources폴더에 xml 파일 생성
-- bean 태그 id에는 "참조에 사용할 값"
+- bean 태그 id에는 "참조에 사용할 값" (xml내에서 참조하기 위한 것, 없어도됨)
 - bean 태그 class에는 "실제 클래스 파일 경로"
 - property는 다른 클래스 또는 인터페이스를 멤버 변수로 가지고 있는 경우에 쓰임
 - 인터페이스에서 property가 쓰일 때 ref 태그를 사용해서 클래스 명시(bean id)함 
