@@ -31,3 +31,43 @@
 
 ![image](https://user-images.githubusercontent.com/62600984/116334902-f2b7b180-a810-11eb-8fbe-8c1bf00d8fec.png)
 
+### Spring AOP
+
+- Proxy기반의 AOP
+- Advice Type
+```
+1. Before: Target의 핵심 메소드 실행 전
+2. After: Target의 핵심 메모드 실행 후
+3. AfterReturning: Targer의 핵심 메소드 실행 하고 값을 리턴한 후
+4. Round: Targer의 핵심 메소드 실행 전/후
+5. AfterThrowing: Targer의 핵심 메소드 실행 중 예외 발생 시
+```
+
+### Advice Type: Before
+
+### Pointcut 표현식
+
+```
+ex1. execution(* com.spring.aoq.test1.*Service.find*(..) )
+
+필수- execution: 지정어
+필수- *: 리턴 타입
+- com.spring.aoq.test1: 패키지
+- *Service: 클래스 타입
+필수- find*: find로 시작하는 메소드
+필수- (..): 메소드 파라메터 
+```
+```
+ex2.excution (*send(*)):
+
+- return: 아무거나
+- send: send 함수
+- (*): single parameter
+```
+```
+ex3.excution(*send(int,..))
+
+- return: 아무거나
+- send: send 함수
+- (int,..): int, 0~여러개
+```
