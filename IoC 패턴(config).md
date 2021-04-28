@@ -18,16 +18,16 @@ public class CoffeeBean implements CoffeeShop{
 ```
 
 3. 의존성 주입
-- @Autowired: xml문서에서 생선된 객체 중에 '타입'을 기준으로 자동 주입(Americano타입을 찾아 자동 주입)
-- @Resource: xml문서에서 생성된 객체 중에 'name'을 기준으로 자동 주입(name이 ame인 것)
+- @Autowired: xml문서에서 생선된 객체 중에 '타입'을 기준으로 자동 주입
+- @Resource: xml문서에서 생성된 객체 중에 'name'을 기준으로 자동 주입
 ```java
 @Component
 public class CoffeeBean implements CoffeeShop{
 	
 	@Resource
-	Americano ame; 
+	Americano ame; //Americano타입을 찾아 자동 주입
 	
 	@Resource
-	CaffeLatte latte;
+	CaffeLatte latte; //name이 ame인 것
 }
 ```
