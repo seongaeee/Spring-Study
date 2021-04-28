@@ -30,7 +30,6 @@ public class CaffeLatte implements Coffee {
 }
 ```
 **3.서비스코드**
-- set 함수 필수!!
 ```java
 public class CoffeeService {
 	Coffee coffee;
@@ -81,7 +80,7 @@ public class CoffeeShop {
 - resources폴더에 xml 파일 생성
 - bean 태그 id에는 "참조에 사용할 값" (xml내에서 참조하기 위한 것, 없어도됨)
 - bean 태그 class에는 "실제 클래스 파일 경로"
-- 생성자 주입: <constructor-arg name=" " value=" "/>
+- 생성자 주입: <constructor-arg name=" " value=" "/>, 꼭 넣어야됨
 - setter 주입: <property name=" " value=" "></property> 
 - ref 태그: 객체 참조
 - value 태그: 값  
