@@ -14,8 +14,7 @@ XML을 사용하지 않고, 자바 코드만으로 컨테이너 설정
 ```java
 @Component
 public class CoffeeBean implements CoffeeShop{
-	
-	}
+}
 ```
 
 3. 의존성 주입
