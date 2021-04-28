@@ -21,7 +21,9 @@
 :star2: **IoC 패턴**
 
 - Inverse of Control, 제어의 역전
-- 비슷하게 쓰이는 단어: DI(Dependency Injection, 의존성 주입)
+- 기존의 클래스에서 객체를 만들때 "new"를 이용해서 만들었지만, IoC에서는 컨테이너가 만들어줘서 주기때문에 제어를 가져간다.
+- DI(Dependency Injection, 의존성 주입): 컨테이너에서 받음(setter와 생성자로 만들어진것을 받는다.)
+- DL(Dependecy Lookup): 컨테이너에서 찾아옴(커넥션풀)
 - 쓰이는 이유? 
 > 자바에서 인터페이스를 인스턴스화하기 위해서는, 반드시 객체 생성에 필요한 코드 작성 <br>
 > 결합도 완전히 없애기 힘듬
