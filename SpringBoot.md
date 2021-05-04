@@ -15,14 +15,17 @@ https://start.spring.io/
 ✏️ **SpringBoot 클래스**
 
 1. SpringbootApplication
-- `@SpringBootApplication`: 설정 파일
+- `@SpringBootApplication`: 서버 시작 (메인 클래스, 부트스트랩 클래스 시작 클래스)
 ```
+@SpringBootApplication 구성 요소
 - @SpringBootConfiguration: =@Configuration. xml문서를 대신해서 설정 정보를 가지고 있는 클래스
 - @EnableAutoConfiguration: 자동 설정 작업을 활성. 생성자가 필요로 하는 빈을 예상하고 생성 & 설정
 - @ComponentScan: 사용자가 만든 것을 현재 package부터 시작해서 하위 패키지를 스캔 한 후 객체 생성 & 주입
 ```
-- 시작 클래스, main으로 실행 가능
-
+- `@MapperScan`: java mapper(Dao)를 ServiceImpl
+```
+@MapperScan(basePackages = {"com.mvc.dao"})
+```
 <br>
 
 2. application.properties
@@ -87,4 +90,9 @@ public class WebConfiguration extends WebMvcConfigurerAdapter {
 ```
 <br>
 
-2. 
+2. SwaggerConfiguration.java 추가
+
+3. Controller에 `@ApiOperation` 추가
+```java
+@ApiOperation(value = " " , notes = " ")
+```
