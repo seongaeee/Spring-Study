@@ -1,6 +1,3 @@
-✏️ **OPEN API**
-
-<br>
 
 ✏️ **REST**
 
@@ -43,3 +40,41 @@
 
 ✏️ **REST Service App**
 
+```java
+@RestController
+public class BoardRestController {
+	
+	@Autowired
+	BoardService service;
+	
+	@GetMapping(value="/boards")
+	public List<Board> selectAll(){
+		return service.selectAll();
+	}
+	
+	@GetMapping(value="/boards/{num}")
+	public Board selectOne(@PathVariable String num) {
+		return service.selectOne(num);
+	}
+	
+	@PostMapping(value="/boards")
+	public Map<String, String> insert(@RequestBody Board b){
+		service.insert(b);
+		
+		Map<String, String> map = new HashMap<String, String>();
+		map.put("result", "추가 성공");
+		
+		return map;
+	}
+
+	@DeleteMapping(value="/boards/{num}")
+	public Map<String, String> delete(@PathVariable String num){
+		service.delete(num);
+		
+		Map<String, String> map = new HashMap<String, String>();
+		map.put("result", "삭제 성공");
+		
+		return map;
+	}
+}
+```
