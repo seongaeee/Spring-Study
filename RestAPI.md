@@ -34,9 +34,11 @@
 
 <br>
 
-✏️ **JSON library**
+6. JSON library
 
 **JSON(browser)** <- Jackson -> **Java object(Backend)** <- MyBatis -> **Relational(Storage)**
+
+<br>
 
 ✏️ **REST Service App**
 
