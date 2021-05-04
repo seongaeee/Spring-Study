@@ -40,6 +40,16 @@
 
 ✏️ **REST Service App**
 
+- `Pom.xml`에 Jackson 추가
+```
+<dependency>
+    <groupId>com.fasterxml.jackson.core</groupId>
+    <artifactId>jackson-databind</artifactId>
+    <version>2.9.2</version>
+</dependency>
+```
+
+- 코드
 ```java
 @RestController
 public class BoardRestController {
