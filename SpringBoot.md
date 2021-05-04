@@ -41,6 +41,8 @@ mybatis.type-aliases-package=
 mybatis.mapper-locations=
 ```
 
+<br>
+
 3. interceptor 추가하기
 ```
 @Configuration
@@ -56,3 +58,33 @@ public class WebConfiguration extends WebMvcConfigurerAdapter {
 }
 
 ```
+
+<br>
+
+✏️ **Swagger**
+
+- API의 추가 또는 변경 시 문서에 적용해야 하는 불편함 해소
+- 간단한 설정으로 API 목록을 `웹에서 확인과 테스트` 가능하게 해준다.
+> API? Application Programing Interface, 응용프로그램에서 데이터를 주고 받기 위한 방법
+
+<br>
+
+1. 라이브러리 추가
+```
+<!-- https://mvnrepository.com/artifact/io.springfox/springfox-swagger-ui -->
+<dependency>
+    <groupId>io.springfox</groupId>
+    <artifactId>springfox-swagger-ui</artifactId>
+    <version>2.9.2</version>
+</dependency>
+
+<!-- https://mvnrepository.com/artifact/io.springfox/springfox-swagger2 -->
+<dependency>
+    <groupId>io.springfox</groupId>
+    <artifactId>springfox-swagger2</artifactId>
+    <version>2.9.2</version>
+</dependency>
+```
+<br>
+
+2. 
