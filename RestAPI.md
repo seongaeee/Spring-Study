@@ -36,7 +36,7 @@
 
 6. JSON library
 
-**JSON(browser)** <- Jackson -> **Java object(Backend)** <- MyBatis -> **Relational(Storage)**
+- **JSON(browser)** <- Jackson -> **Java object(Backend)** <- MyBatis -> **Relational(Storage)**
 
 <br>
 
