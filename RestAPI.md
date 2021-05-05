@@ -40,6 +40,9 @@
 
 <br>
 
+![image](https://user-images.githubusercontent.com/62600984/117161611-065cac80-adfd-11eb-8109-4fbe95d594ad.png)
+
+
 ✏️ **REST Service App**
 
 - `Pom.xml`에 Jackson 추가
@@ -90,3 +93,10 @@ public class BoardRestController {
 	}
 }
 ```
+
+<br>
+
+✏️ **Rest + MVC**
+
+<br>
+
