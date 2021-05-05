@@ -73,6 +73,8 @@ public class SpringbootMvcRestApplication {
 }
 ```
 
+<br>
+
 2. Controller.java
 ```java
 @RestController
@@ -115,7 +117,9 @@ public class BoardRestController {
 }
 ```
 
-3. javascript()
+<br>
+
+3. javascript(ajax)
 
 - url: 요청 url
 - type: 요청 url을 보낼때 방식
