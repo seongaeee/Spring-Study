@@ -54,7 +54,27 @@
 </dependency>
 ```
 
-- 코드
+<br>
+
+✏️ **Rest + MVC**
+
+<br>
+
+1. Application.java
+- 여기서 스트링 부트 실행!
+- `@MapperScan`: com.mvc.dao 패키지를 스캔해서 proxy 객체 생성 및 ServiceImpl에게 주입
+```
+@SpringBootApplication
+@MapperScan(basePackages = {"com.mvc.dao"})
+public class SpringbootMvcRestApplication {
+	public static void main(String[] args) {
+		SpringApplication.run(SpringbootMvcRestApplication.class, args);
+	}
+}
+```
+
+2. Controller.java
+- 
 ```java
 @RestController
 public class BoardRestController {
@@ -81,22 +101,64 @@ public class BoardRestController {
 		
 		return map;
 	}
+	
+	@PutMapping(value="/customers")
+	public Map<String, String> update(@RequestBody Customer c){
+		service.update(c);
+		return map;
+	}
 
 	@DeleteMapping(value="/boards/{num}")
 	public Map<String, String> delete(@PathVariable String num){
 		service.delete(num);
-		
-		Map<String, String> map = new HashMap<String, String>();
-		map.put("result", "삭제 성공");
-		
 		return map;
 	}
 }
 ```
 
-<br>
+3. javascript()
 
-✏️ **Rest + MVC**
+- url: 요청 url
+- type: 요청 url을 보낼때 방식
+- data: 클라이언트가 보내는 데이터
+- contentType: data의 타입
+- dataType: 서버가 보내주는 데이터 타입
+- success: 성공했을때
+- error: 실패했을때
+```
+function customerList(){ //rest서버에 모든 고객 정보 ajax 요청
+	$.ajax({
+		url:'http://localhost/customers',
+		type: 'get',
+		dataType: 'json', //서버가 보내주는 데이터 타입
+		success: function(result){
+			customerListResult(result);
+		},
+		error: function(xhr, status, msg){
+			alert("상태:"+status+", 에러메시지:" + msg);
+		}
+	});
+}
+```
+```
+function customerInsert(){
+	$('#btnInsert').on('click',function(){
 
-<br>
+		var input = JSON.stringify({
+			num: $('#num').val(),
+			name: $('#name').val(),
+			address: $('#address').val()
+		});
 
+		$.ajax({
+			url:'customers',
+			type: 'post',
+			data: input,
+			contentType:"application/json;charset=UTF-8",
+			success: function(){
+				customerList();
+			}
+		});
+	});
+}
+```
