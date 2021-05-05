@@ -74,7 +74,6 @@ public class SpringbootMvcRestApplication {
 ```
 
 2. Controller.java
-- 
 ```java
 @RestController
 public class BoardRestController {
