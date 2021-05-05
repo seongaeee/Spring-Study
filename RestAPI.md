@@ -38,13 +38,14 @@
 
 - **JSON(browser)** <- Jackson -> **Java object(Backend)** <- MyBatis -> **Relational(Storage)**
 
+7. Rest 결과 확인 방법
+
+- 구글 앱 `Postman`
+
 <br>
 
 ![image](https://user-images.githubusercontent.com/62600984/117161611-065cac80-adfd-11eb-8109-4fbe95d594ad.png)
 
-7. Rest 결과 확인 방법
-
-- 구글 앱 `Postman`
 
 ✏️ **REST Service App**
 
