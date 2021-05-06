@@ -31,6 +31,9 @@ public boolean preHandle(HttpServletRequest request, HttpServletResponse respons
 }
 ```
 
+<br>
+
+
 **2. 인터셉터 등록하기**
 
 ✏️ 등록 함수
