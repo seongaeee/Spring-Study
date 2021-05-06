@@ -2,7 +2,16 @@
 
 <br>
 
-1. 
+0. pom.xml
+```
+<dependency>
+    <groupId>commons-fileupload</groupId>
+    <artifactId>commons-fileupload</artifactId>
+    <version>1.4</version>
+</dependency>
+```
+
+1. servlet-context.xml
 - `maxUploadSize`: 한번에 올릴 수 있는 파일의 용량
 
 2.jsp(form 설정)
@@ -20,9 +29,7 @@ private String originFile; //원본 이름
 private String saveFile; //저장 이름
 ```
 
-
-
-````
+```
 mfile.tranferTo: 서버에 전송
 ```
 
