@@ -14,7 +14,7 @@
 1. servlet-context.xml
 - `maxUploadSize`: 한번에 올릴 수 있는 파일의 용량
 
-2.jsp(form 설정)
+2. jsp(form 설정)
 - `method="post"`: 파일 업로드는 반드시 post방식
 - `enctype="multipart/form-data"`: 파일을 서버에 전송
 - `type=file`: 파일을 자동으로 찾아줌
