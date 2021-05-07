@@ -71,3 +71,4 @@ ex3.excution(*send(int,..))
 - send: send 함수
 - (int,..): int, 0~여러개
 ```
+ 
